@@ -24,11 +24,11 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Réparateurs</a>
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Comptes</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}">Tous les réparateurs</a>
-                                <a class="dropdown-item" href="{{ route('logout') }}">Nouveau réparateur</a>
-                                <a class="dropdown-item" href="{{ route('logout') }}">Importer</a>
+                                <a class="dropdown-item" href="{{ route('users.index') }}">Tous les comptes</a>
+                                <a class="dropdown-item" href="{{ route('users.create') }}">Nouveau réparateur</a>
+                                <a class="dropdown-item" href="{{ route('users.import.form') }}">Importer</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -38,14 +38,15 @@
                                 <a class="dropdown-item" href="{{ route('serials.import.form') }}">Importer</a>
                             </div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('reports.index') }}">Rapports</a>
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Rapports</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('reports.index') }}">Tous les rapports</a>
+                                <a class="dropdown-item" href="{{ route('reports.import.form') }}">Importer</a>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('products.index') }}">Produits</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('brands.index') }}">Marques</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('regates.index') }}">Régates</a>

@@ -1,0 +1,47 @@
+@extends('layouts.app')
+@section('content')
+<div class="container-fluid p-5">
+    <div class="row">
+        <div class="col-12">
+            <h1>{{ $regate->code }} - {{ $regate->name }}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="card border-0">
+                <div class="card-body">
+                    @if(count($regate->reports))
+                    <h2>Rapports</h2>
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+                                <th>Numéro de série</th>
+                                <th>Code Article</th>
+                                <th>Audit / Contrôle</th>
+                                <th>Date Audit / Contrôle</th>
+                                <th>Fissure</th>
+                                <th>Longueur Fissure</th>
+                                <th>Observations</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($regate->reports as $report)
+                            <tr>
+                                <td>{{ $report->serial->code }}</td>
+                                <td>{{ $report->serial->product->code }}</td>
+                                <td>{{ $report->type }}</td>
+                                <td>{{ $report->report_date }}</td>
+                                <td>{!! $report->crackStatus() !!}</td>
+                                <td>{{ $report->crack_length }}</td>
+                                <td>{{ $report->observations }}</td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                    @endif
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection

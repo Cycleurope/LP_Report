@@ -17,6 +17,12 @@ class SerialController extends Controller
         ]);
     }
 
+    public function show($serial)
+    {
+        $serial = Serial::where('code', $serial)->first();
+        return view('serials.show', ['serial' => $serial]);
+    }
+
     public function importForm()
     {
         return view('serials.import');

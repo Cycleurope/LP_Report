@@ -14,4 +14,10 @@ class RegateController extends Controller
             'regates' => $regates
         ]);
     }
+
+    public function show($code)
+    {
+        $regate = Regate::where('code', $code)->first();
+        return view('regates.show', ['regate' => $regate]);
+    }
 }

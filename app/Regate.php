@@ -19,4 +19,16 @@ class Regate extends Model
     {
         return $this->hasMany(Report::class);
     }
+
+    public function reportsCount()
+    {   
+        $count = $this->reports->count();
+        if ($count === 0) {
+            return '<span class="text-secondary">Aucun rapport associé</span>';
+        } else if($count === 1) {
+            return '<span>1 rapport associé</span>';
+        } else {
+            return '<span>'.$count.' rapports associés</span>';
+        }
+    }
 }

@@ -15,17 +15,15 @@ class CreateReportsTable extends Migration
     {
         Schema::create('reports', function (Blueprint $table) {
             $table->id();
-            $table->string('bike', 80)->nullable();
             $table->enum('type', ['audit', 'checkup']);
             $table->dateTime('report_date');
             $table->boolean('crack')->default(0);
             $table->integer('crack_length')->default(0);
             $table->text('observations')->nullable();
-            $table->boolean('frame_replacement')->default(0);
             $table->bigInteger('serial_id')->unsigned();
             $table->foreign('serial_id')->references('id')->on('serials')->onDelete('cascade');
-            $table->bigInteger('users_id')->unsigned();
-            $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade');
+            $table->bigInteger('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->bigInteger('regate_id')->unsigned();
             $table->foreign('regate_id')->references('id')->on('regates')->onDelete('cascade');
             $table->timestamps();

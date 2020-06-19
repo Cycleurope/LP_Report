@@ -13,11 +13,11 @@ class CreateBrandsTable extends Migration
      */
     public function up()
     {
-        Schema::create('brands', function (Blueprint $table) {
-            $table->id();
-            $table->string('name', 80);
-            $table->timestamps();
-        });
+        // Schema::create('brands', function (Blueprint $table) {
+        //     $table->id();
+        //     $table->string('name', 80);
+        //     $table->timestamps();
+        // });
     }
 
     /**

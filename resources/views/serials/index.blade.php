@@ -28,15 +28,16 @@
                             @foreach($serials as $serial)
                             <tr>
                                 <td>{{ $serial->code }}</td>
-                                <td>{{ $serial->regate->code }}</td>
+                                <td>{{ $serial->regate->code }} <small>({{$serial->regate->name}})</small></td>
                                 <td>{{ $serial->cei_order }}</td>
                                 <td>{{ $serial->poste_order }}</td>
-                                <td>{{ $serial->manufactured_at }}</td>
+                                <td>{{ date('d/m/Y', strtotime($serial->manufactured_at)) }}</td>
                                 <td>{{ $serial->product->code }}</td>
                                 <td>
-                                    @if( $serial->report )
+                                    @if( count($serial->reports) )
+                                    <span class="text-primary"><a href="{{ route('serials.show', $serial->code) }}">Consulter les rapports</a></span>
                                     @else
-                                    <span class="text-danger">No report</span>
+                                    <span class="text-danger">Aucun rapport</span>
                                     @endif
                                 </td>
                             </tr>

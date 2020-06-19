@@ -8,16 +8,49 @@ use App\Regate;
 use App\Serial;
 use Illuminate\Support\Collection;
 use Maatwebsite\Excel\Concerns\ToCollection;
-
-class ReportsImport implements ToCollection
+use Maatwebsite\Excel\Concerns\WithHeadingRow;
+use Auth;
+class ReportsImport implements ToCollection, WithHeadingRow
 {
-
 
     public function collection(Collection $collection)
     {
+        $user = Auth::user();
         foreach($collection as $row)
         {
-            
+            $regate_code            = trim($row['regate_etablissement']);
+            $serial                 = trim($row['nserie']);
+            $type                   = trim($row['audit_controle']);
+            $report_date            = date('Y-m-d 00:00:00', (intval(trim($row['date_auditcontrole'])) - 25569) * 86400);
+            $crack                  = trim(strtolower($row['fissure_on_voir_fiche_atelier_38']));
+            if(in_array($crack, ['n', 'non', 'no', 0, '', "N", "Non", "NON", "nOn", "nON", "NO"], true)) {
+                $crack = 1;
+            } else $crack = 0;
+            $crack_length           = trim($row['longueur_mm']);
+            $crack_length           = intval($crack_length);
+            $observations           = trim($row['observations']);
+
+            if( Serial::where('code', $serial)->exists() && Regate::where('code', $regate_code)->exists()) {
+
+                $serial = Serial::where('code', $serial)->first();
+                $regate = Regate::where('code', $regate_code)->first();
+
+                if( !Report::where('serial_id', $serial->id)->where('report_date', $report_date)->exists() ):
+
+                Report::create([
+                    'serial_id'         => $serial->id,
+                    'user_id'           => $user->id,
+                    'regate_id'         => $regate->id,
+                    'type'              => $type,
+                    'report_date'       => $report_date,
+                    'crack'             => $crack,
+                    'crack_length'      => $crack_length,
+                    'observations'      => $observations,
+                ]);
+
+                endif;
+
+            }
         }
     }
 

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<div class="container">
+<div class="container-fluid p-5">
     <div class="row">
         <div class="col-12">
             <h1>Products</h1>
@@ -9,10 +9,11 @@
     <div class="row">
         <div class="col-12">
             @if(count($products))
-            <table class="table">
+            <table class="table table-sm table-hover">
                 <thead>
                     <tr>
-                        <td>Code</td>
+                        <th>Code</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>

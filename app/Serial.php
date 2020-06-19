@@ -15,9 +15,9 @@ class Serial extends Model
         return $this->belongsTo(Regate::class);
     }
 
-    public function report()
+    public function reports()
     {
-        return $this->hasOne(Report::class);
+        return $this->hasMany(Report::class);
     }
 
     public function product()
