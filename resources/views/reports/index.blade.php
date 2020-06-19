@@ -3,10 +3,13 @@
 <div class="container-fluid p-5">
     <div class="row">
         <div class="col-12">
-            <h1>Reports</h1>
+            <h1>Rapports</h1>
         </div>
     </div>
     <div class="row">
+        <div class="col-12 mb-4">
+        <a href="{{ route('reports.export') }}" class="btn btn-success btn-lg">Exporter les rapports</a>
+        </div>
         <div class="col-12">
             @if(count($reports))
             <div class="card border-0">

@@ -24,15 +24,18 @@ Route::post('/serials/import', 'SerialController@import')->name('serials.import.
 
 Route::get('/reports', 'ReportController@index')->name('reports.index');
 Route::get('/reports/import', 'ReportController@importForm')->name('reports.import.form');
+Route::get('/reports/export', 'ReportController@export')->name('reports.export');
 Route::post('/reports/import', 'ReportController@import')->name('reports.import.post');
 
 Route::get('/users', 'UserController@index')->name('users.index');
 Route::get('/users/create', 'UserController@create')->name('users.create');
 Route::get('/users/import', 'UserController@importForm')->name('users.import.form');
+Route::get('/users/{user}/reports/export', 'UserController@export')->name('users.reports.export');
 Route::post('/users/import', 'UserController@import')->name('users.import.post');
 
 Route::get('/regates', 'RegateController@index')->name('regates.index');
 Route::get('/regates/{code}', 'RegateController@show')->name('regates.show');
+Route::get('/regates/{code}/reports/export', 'RegateController@export')->name('regates.reports.export');
 
 Route::get('/brands', 'BrandController@index')->name('brands.index');
 

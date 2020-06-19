@@ -20,4 +20,9 @@ class RegateController extends Controller
         $regate = Regate::where('code', $code)->first();
         return view('regates.show', ['regate' => $regate]);
     }
+
+    public function export($regate)
+    {
+        return redirect()->route('regates.show', $regate);
+    }
 }

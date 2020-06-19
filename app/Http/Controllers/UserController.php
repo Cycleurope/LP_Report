@@ -11,7 +11,7 @@ class UserController extends Controller
 {
     public function index()
     {    
-        $users = User::all();
+        $users = User::paginate(40);
         return view('users.index', ['users' => $users]);
     }
 
@@ -27,7 +27,14 @@ class UserController extends Controller
 
     public function import(Request $request)
     {
+        $time = 180;
+        ini_set('max_execution_time', $time);
         Excel::import(new UsersImport, $request->file);
         return redirect()->route('users.index');
+    }
+
+    public function export()
+    {
+        
     }
 }

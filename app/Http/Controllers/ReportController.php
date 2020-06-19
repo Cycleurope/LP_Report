@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Report;
-use App\Imports\ReportsImport;
+use App\Exports\ReportsExport;
 use Maatwebsite\Excel\Facades\Excel;
 
 class ReportController extends Controller
@@ -30,6 +30,11 @@ class ReportController extends Controller
     {
         Excel::import(new ReportsImport, $request->file);
         return redirect()->route('reports.index');
+    }
+
+    public function export()
+    {
+        return Excel::download(new ReportsExport, 'reports.xlsx');
     }
 
 }

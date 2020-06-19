@@ -7,6 +7,11 @@
         </div>
     </div>
     <div class="row">
+        <div class="col-12 mb-4">
+            <a href="{{ route('regates.reports.export', $regate->code) }}" class="btn btn-success btn-lg">Exporter les rapports pour cette régate</a>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-12">
             <div class="card border-0">
                 <div class="card-body">
@@ -38,6 +43,8 @@
                             @endforeach
                         </tbody>
                     </table>
+                    @else
+                    <div class="alert alert-primary">Aucun rapport associé</div>
                     @endif
                 </div>
             </div>
