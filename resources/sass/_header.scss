@@ -1,0 +1,23 @@
+header#header {
+    border: 0px solid red !important;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    nav.navbar {
+        background: #ff9000;
+        min-height: 80px;
+        .nav-item {
+            padding: 0.5em;
+            a.nav-link {
+                color: #ffffff;
+                background: #ff8000;
+                padding: 0.5em 1.25em;
+                border-radius: 2em;
+                &:hover {
+                    background: #ff4000;
+                }
+            }
+        }
+    }
+}
