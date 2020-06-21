@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
-<body>
+<body style="background: #ffa000">
     <div id="main-signin-wrapper" class="p-0">
         <div class="container-fluid">
             <div class="row">
