@@ -3,7 +3,7 @@
 <div class="container-fluid p-5">
     <div class="row">
         <div class="col-12">
-            <h1>Importer des rapports</h1>
+            <h1>Envoyer des rapports</h1>
         </div>
     </div>
     <div class="row">
