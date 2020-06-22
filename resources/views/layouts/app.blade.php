@@ -24,6 +24,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <!-- Left Side Of Navbar -->
                         <ul class="navbar-nav mr-auto">
+                            @role('admin')
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Comptes</a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -32,6 +33,8 @@
                                     <a class="dropdown-item" href="{{ route('users.import.form') }}">Importer</a>
                                 </div>
                             </li>
+                            @endrole
+                            @role('admin')
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Numéros de série</a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -39,6 +42,7 @@
                                     <a class="dropdown-item" href="{{ route('serials.import.form') }}">Importer</a>
                                 </div>
                             </li>
+                            @endrole
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Rapports</a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -46,12 +50,16 @@
                                     <a class="dropdown-item" href="{{ route('reports.import.form') }}">Envoyer des rapports</a>
                                 </div>
                             </li>
+                            @role('admin')
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('products.index') }}">Produits</a>
                             </li>
+                            @endrole
+                            @role('admin')
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('regates.index') }}">REGATE</a>
                             </li>
+                            @endrole
                         </ul>
     
                         <!-- Right Side Of Navbar -->

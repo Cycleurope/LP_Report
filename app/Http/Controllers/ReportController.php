@@ -15,9 +15,15 @@ class ReportController extends Controller
 {
     public function index()
     {
+        if(Auth::user()->hasRole('admin')):
         $reports = Report::all();
         $reports_ok = Report::where('crack', 0)->get();
         $reports_ko = Report::where('crack', 1)->get();
+        else:
+            $reports = Report::where('user_id', Auth::user()->id)->get(); 
+            $reports_ok = Report::where('crack', 0)->where('user_id', Auth::user()->id)->get();
+            $reports_ko = Report::where('crack', 1)->where('user_id', Auth::user()->id)->get();
+        endif;
         return view('reports.index', [
             'reports' => $reports,
             'reports_ok' => $reports_ok,
