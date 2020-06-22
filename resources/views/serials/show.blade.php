@@ -48,10 +48,10 @@
                             <tr>
                                 <th>Code Régate</th>
                                 <th>&nbsp;</th>
-                                <th>A/C</th>
-                                <th>Date A/C</th>
-                                <th>Fissure</th>
-                                <th>Longueur Fissure</th>
+                                <th>Type (Audit / Contrôle)</th>
+                                <th>Date d'audit / contrôle</th>
+                                <th>Micro-fissuer</th>
+                                <th>Longueur (en mm)</th>
                                 <th>Observations</th>
                             </tr>
                         </thead>
@@ -60,7 +60,7 @@
                             <tr>
                                 <td>{{ $report->regate->code }}</td>
                                 <td><a href="{{ route('regates.show', $report->regate->code) }}">{{ $report->regate->name }}</a></td>
-                                <td>{{ $report->type }}</td>
+                                <td>{{ $report->friendlyType() }}</td>
                                 <td>{{ $report->report_date }}</td>
                                 <td>{!! $report->crackStatus() !!}</td>
                                 <td>{{ $report->crack_length }}</td>
