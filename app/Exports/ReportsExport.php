@@ -25,7 +25,8 @@ class ReportsExport implements FromCollection, ShouldAutoSize, WithHeadings, Wit
     {
         return [
             $report->serial->code,
-            $report->serial->   product->code,
+            $report->serial->product->code,
+            substr($report->serial->manufactured_at, 8, 2)."/".substr($report->serial->manufactured_at, 5, 2)."/".substr($report->serial->manufactured_at, 0, 4),
             $report->regate->code,
             $report->regate->name,
             $report->simpleFriendlyType(),
@@ -36,7 +37,9 @@ class ReportsExport implements FromCollection, ShouldAutoSize, WithHeadings, Wit
             $report->user->name,
             $report->user->postalcode,
             $report->user->city,
-            substr($report->created_at, 8, 2)."/".substr($report->created_at, 5, 2)."/".substr($report->created_at, 0, 4)
+            substr($report->created_at, 8, 2)."/".substr($report->created_at, 5, 2)."/".substr($report->created_at, 0, 4),
+            '',
+            '',
         ];
     }
 
@@ -45,6 +48,7 @@ class ReportsExport implements FromCollection, ShouldAutoSize, WithHeadings, Wit
         return [
             'Numéro de série',
             'Code Article',
+            'Date Fabrication',
             'Code REGATE',
             'Libellé',
             'Audit / Contrôle',
@@ -55,7 +59,9 @@ class ReportsExport implements FromCollection, ShouldAutoSize, WithHeadings, Wit
             '',
             'CP',
             'Ville',
-            'Date de déclaration'
+            'Date de déclaration',
+            'Cadre à remplacer',
+            'Nouveau numéro de série',
         ];
     }
 }
