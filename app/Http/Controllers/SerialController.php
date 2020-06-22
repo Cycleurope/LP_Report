@@ -11,7 +11,7 @@ class SerialController extends Controller
 {
     public function index()
     {
-        $serials = Serial::paginate(50);
+        $serials = Serial::orderBy('code', 'DESC')->paginate(50);
         return view('serials.index', [
             'serials' => $serials
         ]);

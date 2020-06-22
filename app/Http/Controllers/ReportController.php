@@ -62,6 +62,8 @@ class ReportController extends Controller
 
     public function import(Request $request)
     {
+        ini_set('memory_limit', '1024M');
+        ini_set('max_execution_time', 300);
         Excel::import(new ReportsImport, $request->file);
         return redirect()->route('reports.index');
     }

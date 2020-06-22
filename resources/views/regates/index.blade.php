@@ -3,7 +3,7 @@
 <div class="container-fluid p-5">
     <div class="row">
         <div class="col-12">
-            <h1>Regates</h1>
+            <h1>Codes REGATE</h1>
         </div>
     </div>
     <div class="row">
@@ -11,6 +11,7 @@
             @if(count($regates))
             <div class="card border-0">
                 <div class="card-body">
+                    {{ $regates->links() }}
                     <table class="table table-sm table-hover">
                         <thead>
                             <tr>
@@ -19,7 +20,7 @@
                                 <td>Adresse 1</td>
                                 <td>Adresse 2</td>
                                 <td>Ville</td>
-                                <td>reportsCount</td>
+                                <td>Rapports</td>
                             </tr>
                         </thead>
                         <tbody>
@@ -35,6 +36,7 @@
                             @endforeach
                         </tbody>
                     </table>
+                    {{ $regates->links() }}
                 </div>
             </div>
             @else
