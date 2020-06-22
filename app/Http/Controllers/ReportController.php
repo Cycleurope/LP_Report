@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Report;
+use App\Regate;
+use App\Serial;
 use App\Imports\ReportsImport;
 use App\Exports\ReportsExport;
 use Maatwebsite\Excel\Facades\Excel;
+use Auth;
 
 class ReportController extends Controller
 {
@@ -25,6 +28,36 @@ class ReportController extends Controller
     public function importForm()
     {
         return view('reports.import');
+    }
+
+    public function store(Request $request)
+    {
+        $regate = null;
+        $serial = null;
+        if(Regate::where('code', trim($request->regate))->exists()) {
+            $regate = Regate::where('code', trim($request->regate))->first();
+        }
+
+        if(Serial::where('code', trim($request->serial))->exists()) {
+            $serial = Serial::where('code', trim($request->serial))->first();
+        }
+
+        if($regate != null && $serial != null) {
+            $report = Report::create([
+                'serial_id' => $serial->id,
+                'user_id' => Auth::user()->id,
+                'regate_id' => $regate->id,
+                'observations' => $request->observations,
+                'crack' => $request->crack,
+                'crack_length' => $request->crack_length,
+                'report_date' => $request->report_date,
+                'type' => $request->type
+            ]);
+        }
+
+        return redirect()->route('reports.import.form')
+            ->with('message', 'Le rapport a bien été enregistré.')
+            ->with('class', 'success');
     }
 
     public function import(Request $request)

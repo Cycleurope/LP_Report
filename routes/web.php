@@ -25,6 +25,7 @@ Route::post('/serials/import', 'SerialController@import')->name('serials.import.
 Route::get('/reports', 'ReportController@index')->name('reports.index');
 Route::get('/reports/import', 'ReportController@importForm')->name('reports.import.form');
 Route::get('/reports/export', 'ReportController@export')->name('reports.export');
+Route::post('/reports', 'ReportController@store')->name('reports.store');
 Route::post('/reports/import', 'ReportController@import')->name('reports.import.post');
 
 Route::get('/users', 'UserController@index')->name('users.index');

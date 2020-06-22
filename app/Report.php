@@ -34,6 +34,24 @@ class Report extends Model
         }
     }
 
+    public function simpleCrackStatus()
+    {
+        if($this->crack) {
+            return 'Oui';
+        } else {
+            return 'Non';
+        }
+    }
+
+    public function simpleFriendlyType()
+    {
+        if($this->type == 'audit') {
+            return 'Audit';
+        } else {
+            return 'Contrôle';
+        }
+    }
+
     public function friendlyType()
     {
         if($this->type == 'audit') {

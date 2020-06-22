@@ -17,6 +17,7 @@
                     <div class="row">
                         <div class="col-4">
                             <h3>{{ $reports->count() }}</h3>
+                            rapports enregistrés
                         </div>
                         <div class="col-4">
                             <h3>{{ $reports_ko->count() }}</h3>
