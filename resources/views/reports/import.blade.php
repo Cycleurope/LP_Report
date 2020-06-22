@@ -21,14 +21,14 @@
                                 <div class="row">
                                     <div class="form-group col-6">
                                         <label for="regate">Code REGATE</label>
-                                        <input type="text" name="regate" id="regate" class="form-control">
+                                        <input type="number" name="regate" id="regate" class="form-control text-center">
                                     </div>
                                     <div class="form-group col-6">
                                         <label for="serial">Numéro de série</label>
-                                        <input type="text" name="serial" id="serial" class="form-control">
+                                        <input type="number" name="serial" id="serial" class="form-control text-center">
                                     </div>
                                     <div class="form-group col-6">
-                                        <label for="report_date">Date Audit / Contrôle</label>
+                                        <label for="report_date">Type de rapport</label>
                                         <select name="type" id="type" class="form-control">
                                             <option value="audit">Audit</option>
                                             <option value="checkup">Contrôle</option>
@@ -48,8 +48,8 @@
                                         </select>
                                     </div>
                                     <div class="form-group col-8">
-                                        <label for="report_date">Longueur</label>
-                                        <input type="text" name="crack_length" id="crack_length" class="form-control">
+                                        <label for="report_date">Longueur (en mm)</label>
+                                        <input type="number" name="crack_length" id="crack_length" class="form-control text-center" value="0">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -84,7 +84,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12"><a href="{{ route('reports.index') }}">Retour</a></div>
+        <div class="col-12"><a href="{{ route('reports.index') }}" class="btn btn-secondary">Retour</a></div>
     </div>
 </div>
 @endsection
