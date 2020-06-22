@@ -2,9 +2,9 @@
 @section('content')
 <div class="container-fluid px-5 py-5">
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 mb-4">
             <h1>Serials</h1>
-            ({{ $serials->count() }})
+            ({{ $serials_count }})
         </div>
     </div>
     <div class="row">
