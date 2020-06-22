@@ -4,6 +4,7 @@
     <div class="row">
         <div class="col-12">
             <h1>Serials</h1>
+            ({{ $serials->count() }})
         </div>
     </div>
     <div class="row">
