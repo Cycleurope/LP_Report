@@ -3,7 +3,7 @@
 <div class="container-flui p-5">
     <div class="row">
         <div class="col-12">
-            <h1>Users</h1>
+            <h1>Comptes Utilisteurs</h1>
         </div>
     </div>
     <div class="row">
@@ -15,10 +15,11 @@
                     <table class="table table-sm table-hover">
                         <thead>
                             <tr>
-                                <td>Identifiant</td>
-                                <td>Nom</td>
-                                <td>Adresse e-mail</td>
-                                <td>Ville</td>
+                                <th>Identifiant</th>
+                                <th>Nom</th>
+                                <th>Adresse e-mail</th>
+                                <th>Ville</th>
+                                <th>Role</th>
                             </tr>
                         </thead>
                         <tbody>

@@ -16,12 +16,12 @@
                     <table class="table table-sm table-hover">
                         <thead>
                             <tr>
-                                <td>Code</td>
-                                <td>Regate</td>
-                                <td>Adresse 1</td>
-                                <td>Adresse 2</td>
-                                <td>Ville</td>
-                                <td>Rapports</td>
+                                <th>Code</th>
+                                <th>Regate</th>
+                                <th>Adresse 1</th>
+                                <th>Adresse 2</th>
+                                <th>Ville</th>
+                                <th>Rapports</th>
                             </tr>
                         </thead>
                         <tbody>

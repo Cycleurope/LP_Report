@@ -3,7 +3,7 @@
 <div class="container-fluid px-5 py-5">
     <div class="row">
         <div class="col-12 mb-4">
-            <h1>Serials</h1>
+            <h1>Numéros de série</h1>
             ({{ $serials_count }})
         </div>
     </div>
@@ -16,13 +16,13 @@
                     <table class="table table-sm table-hover">
                         <thead>
                             <tr>
-                                <td>No Série</td>
-                                <td>Régate</td>
-                                <td>Commande CEI</td>
-                                <td>Commande Poste</td>
-                                <td>Date fabrication</td>
-                                <td>Code Prooduit</td>
-                                <td>Rapport</td>
+                                <th>No Série</th>
+                                <th>Régate</th>
+                                <th>Commande CEI</th>
+                                <th>Commande Poste</th>
+                                <th>Date fabrication</th>
+                                <th>Code Prooduit</th>
+                                <th>Rapport</th>
                             </tr>
                         </thead>
                         <tbody>

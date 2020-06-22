@@ -1,0 +1,19 @@
+.table {
+    thead {
+        tr {
+            th {
+                padding: 1em;
+                font-weight: 600 !important;
+                border: 0;
+                border-bottom: 1Px solid #111114;
+            }
+        }
+    }
+    tbody {
+        tr {
+            td {
+                padding: 1em;
+            }
+        }
+    }
+}
