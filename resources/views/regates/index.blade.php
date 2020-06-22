@@ -2,8 +2,9 @@
 @section('content')
 <div class="container-fluid p-5">
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 mb-4">
             <h1>Codes REGATE</h1>
+            {{ $regates_count }}
         </div>
     </div>
     <div class="row">

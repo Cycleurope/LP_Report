@@ -10,8 +10,10 @@ class RegateController extends Controller
     public function index()
     {
         $regates = Regate::orderBy('code', 'ASC')->paginate(40);
+        $regates_count = Regate::all()->count();
         return view('regates.index', [
-            'regates' => $regates
+            'regates' => $regates,
+            'regates_count' => $regates_count,
         ]);
     }
 
