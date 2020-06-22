@@ -10931,6 +10931,7 @@ a.text-dark:focus {
 h1 {
   font-size: 3em;
   font-weight: 600;
+  line-height: 1em;
 }
 
 header#header {
@@ -10995,6 +10996,26 @@ header#header nav.navbar .navbar-brand {
 
 .table tbody tr td {
   padding: 1em;
+}
+
+.btn {
+  border-radius: 0;
+  padding: 0.5em 1.5em;
+}
+
+.btn.btn-success {
+  background: #ffa000;
+  border: 0;
+}
+
+.btn.btn-success:active {
+  background: #ff6000 !important;
+  box-shadow: 0 !important;
+}
+
+.btn.btn-success:before,
+.btn.btn-success:after {
+  display: none;
 }
 
 div#app {

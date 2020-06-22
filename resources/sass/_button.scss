@@ -1,0 +1,15 @@
+.btn {
+    border-radius: 0;
+    padding: 0.5em 1.5em;
+    &.btn-success {
+        background: #ffa000;
+        border: 0;
+        &:active {
+            background: #ff6000 !important;
+            box-shadow: 0 !important;
+        }
+        &:before, &:after {
+            display: none;
+        }
+    }
+}

@@ -22,7 +22,7 @@
                                 @csrf
                                 <div class="row">
                                     <div class="col-md-8 offset-md-4 mb-3">
-                                        <h1 style="font-weight: 900">LP Reports</h1>
+                                        <h1 style="font-weight: 900">Reporting<br />La Poste</h1>
                                         <h3 style="font-weight: 100">Connexion</h3>
                                     </div>
                                 </div>
