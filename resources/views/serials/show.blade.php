@@ -50,7 +50,7 @@
                                 <th>&nbsp;</th>
                                 <th>Type (Audit / Contrôle)</th>
                                 <th>Date d'audit / contrôle</th>
-                                <th>Micro-fissuer</th>
+                                <th>Micro-fissure</th>
                                 <th>Longueur (en mm)</th>
                                 <th>Observations</th>
                             </tr>
@@ -60,7 +60,7 @@
                             <tr>
                                 <td>{{ $report->regate->code }}</td>
                                 <td><a href="{{ route('regates.show', $report->regate->code) }}">{{ $report->regate->name }}</a></td>
-                                <td>{{ $report->friendlyType() }}</td>
+                                <td>{!! $report->friendlyType() !!}</td>
                                 <td>{{ $report->report_date }}</td>
                                 <td>{!! $report->crackStatus() !!}</td>
                                 <td>{{ $report->crack_length }}</td>
