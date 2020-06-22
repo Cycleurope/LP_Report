@@ -27,7 +27,7 @@
                         </thead>
                         <tbody>
                             @foreach($serials as $serial)
-                            <tr>
+                            <tr class="{{ count($serial->reports) ? "table-light text-secondary" : "" }}">
                                 <td>{{ $serial->code }}</td>
                                 <td>{{ $serial->regate->code }} <small>({{$serial->regate->name}})</small></td>
                                 <td>{{ $serial->cei_order }}</td>

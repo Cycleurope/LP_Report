@@ -8,14 +8,30 @@ header#header {
         background: #ff9000;
         min-height: 80px;
         .nav-item {
-            padding: 0.5em;
+            padding: 0.25em;
+            font-weight: 600;
+            font-size: 1em;
             a.nav-link {
                 color: #ffffff;
-                background: #ff8000;
-                padding: 0.5em 1.25em;
+                background: #ff8800;
+                padding: 0.5em 1em;
                 border-radius: 2em;
                 &:hover {
-                    background: #ff4000;
+                    background: #ff7b00;
+                }
+            }
+            .dropdown-menu {
+                background: #ffffff;
+                margin-top: 0;
+                border-radius: 0;
+                border: 0;
+                .dropdown-item {
+                    padding: 0.5em 1.5em;
+                    transition: all .25s;
+                    &:hover {
+                        background: #ff7b00;
+                        color: #ffffff;
+                    }
                 }
             }
         }
