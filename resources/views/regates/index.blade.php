@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-12 mb-4">
             <h1>Codes REGATE</h1>
-            {{ $regates_count }}
+            <span>{{ $regates_count }} codes REGATE</span>
         </div>
     </div>
     <div class="row">
