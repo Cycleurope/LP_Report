@@ -50,7 +50,7 @@
                                 <td><a href="{{ route('serials.show', $r->serial->code) }}">{{ $r->serial->code }}</a></td>
                                 <td>{{ $r->regate->code }}</td>
                                 <td>{{ $r->regate->name }}</td>
-                                <td>{{ $r->type }}</td>
+                                <td>{!! $r->friendlyType() !!}</td>
                                 <td>{{ $r->report_date }}</td>
                                 <td>{!! $r->crackStatus() !!}</td>
                                 <td>{{ $r->crack_length }}</td>

@@ -15,7 +15,7 @@ class CreateReportsTable extends Migration
     {
         Schema::create('reports', function (Blueprint $table) {
             $table->id();
-            $table->enum('type', ['audit', 'checkup']);
+            $table->string('type')->default('audit');
             $table->dateTime('report_date');
             $table->boolean('crack')->default(0);
             $table->integer('crack_length')->default(0);

@@ -8,7 +8,7 @@ class Report extends Model
 {
     protected $table = "reports";
 
-    protected $fillable = ['bike', 'brand_id', 'audit_checkup', 'report_date', 'crack', 'crack_length', 'observations', 'frame_replacement', 'serial_id', 'user_id', 'regate_id'];
+    protected $fillable = ['bike', 'brand_id', 'type', 'report_date', 'crack', 'crack_length', 'observations', 'frame_replacement', 'serial_id', 'user_id', 'regate_id'];
 
     public function serial()
     {
@@ -31,6 +31,15 @@ class Report extends Model
             return '<span class="text-danger">OUI</span>';
         } else {
             return '<span class="text-success">NON</span>';
+        }
+    }
+
+    public function friendlyType()
+    {
+        if($this->type == 'audit') {
+            return '<span class="text">Audit</span>';
+        } else {
+            return '<span class="text">Contrôle</span>';
         }
     }
     

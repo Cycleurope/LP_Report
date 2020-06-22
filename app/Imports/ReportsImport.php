@@ -20,12 +20,17 @@ class ReportsImport implements ToCollection, WithHeadingRow
         {
             $regate_code            = trim($row['regate_etablissement']);
             $serial                 = trim($row['nserie']);
-            $type                   = trim($row['audit_controle']);
+            $type                   = strtolower(trim($row['audit_controle']));
+            if($type == "a") {
+                $type = "audit";
+            } elseif ($type == "c") {
+                $type = "checkup";
+            }
             $report_date            = date('Y-m-d 00:00:00', (intval(trim($row['date_auditcontrole'])) - 25569) * 86400);
             $crack                  = trim(strtolower($row['fissure_on_voir_fiche_atelier_38']));
             if(in_array($crack, ['n', 'non', 'no', 0, '', "N", "Non", "NON", "nOn", "nON", "NO"], true)) {
-                $crack = 1;
-            } else $crack = 0;
+                $crack = 0;
+            } else $crack = 1;
             $crack_length           = trim($row['longueur_mm']);
             $crack_length           = intval($crack_length);
             $observations           = trim($row['observations']);
