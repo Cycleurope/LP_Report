@@ -59,4 +59,9 @@ class ReportsImport implements ToCollection, WithHeadingRow
         }
     }
 
+    public function headingRow(): int
+    {
+        return 2;
+    }
+
 }
