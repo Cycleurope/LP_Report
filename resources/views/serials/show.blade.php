@@ -26,7 +26,7 @@
                             </tr>
                             <tr>
                                 <th>Date de fabrication</th>
-                                <td>{{ $serial->manufactured_at }}</td>
+                                <td>{{ date('d/m/Y', strtotime($serial->manufactured_at)) }}</td>
                             </tr>
                             <tr>
                                 <th>Code Article</th>
