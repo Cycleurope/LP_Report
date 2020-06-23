@@ -24,18 +24,18 @@
                                     </div>
                                     <div class="form-group col-8">
                                         <label for="serial">Numéro de série</label>
-                                        <input type="number" name="serial" id="serial" class="form-control text-center">
+                                        <input type="text" name="serial" id="serial" class="form-control text-center">
                                     </div>
                                     <div class="col-12">
                                         <h4>Bureau de Poste</h4>
                                     </div>
                                     <div class="form-group col-8 offset-md-4">
                                         <label for="regate">Code REGATE</label>
-                                        <input type="number" name="regate" id="regate" class="form-control text-center">
+                                        <input type="text" name="regate" id="regate" class="form-control text-center">
                                     </div>
                                     <div class="form-group col-4">
                                         <label for="postal">Code Postal</label>
-                                        <input type="number" name="postal" id="postal" class="form-control text-center">
+                                        <input type="text" name="postal" id="postal" class="form-control text-center">
                                     </div>
                                     <div class="form-group col-8">
                                         <label for="city">Ville</label>
@@ -66,7 +66,7 @@
                                     </div>
                                     <div class="form-group col-8">
                                         <label for="report_date">Longueur (en mm)</label>
-                                        <input type="number" name="crack_length" id="crack_length" class="form-control text-center" value="0">
+                                        <input type="number" name="crack_length" id="crack_length" class="form-control text-center" value="0" min="0" max="10">
                                     </div>
                                 </div>
                                 <div class="form-group">
