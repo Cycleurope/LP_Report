@@ -52,7 +52,7 @@
                             </li>
                             @role('admin')
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('regates.index') }}">REGATE</a>
+                                <a class="nav-link" href="{{ route('regates.index') }}">Codes REGATE</a>
                             </li>
                             @endrole
                         </ul>
