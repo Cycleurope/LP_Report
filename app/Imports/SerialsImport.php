@@ -33,37 +33,41 @@ class SerialsImport implements ToCollection, WithHeadingRow
             $serial_code        = trim($row['chassis_ce']);
             //dd($regate_city);
 
-            if(!Regate::where('code', $regate_code)->exists()) {
-                $regate = Regate::create([
-                    'code'              => $regate_code,
-                    'name'              => $regate_name,
-                    'address1'          => $regate_addr1,
-                    'address2'          => $regate_addr2,
-                    'postal_code'       => $regate_postal,
-                    'city'              => $regate_city
-                ]);
-            } else {
-                $regate = Regate::where('code', $regate_code)->first();
-            }
+            if(substr($regate_code, 0, 1) != "#"):
 
-            if(!Product::where('code',$product_code)->exists()) {
-                $product = Product::create([
-                    'code' => $product_code
-                ]);
-            } else {
-                $product = Product::where('code', $product_code)->first();
-            }
+                if(!Regate::where('code', $regate_code)->exists()) {
+                    $regate = Regate::create([
+                        'code'              => $regate_code,
+                        'name'              => $regate_name,
+                        'address1'          => $regate_addr1,
+                        'address2'          => $regate_addr2,
+                        'postal_code'       => $regate_postal,
+                        'city'              => $regate_city
+                    ]);
+                } else {
+                    $regate = Regate::where('code', $regate_code)->first();
+                }
 
-            if(!Serial::where('code', $serial_code)->exists()) {
-                Serial::create([
-                    'code'              => $serial_code,
-                    'product_id'        => $product->id,
-                    'manufactured_at'   => $m_at_formatted,
-                    'cei_order'         => $cei_order,
-                    'poste_order'       => $poste_order,
-                    'regate_id'         => $regate->id
-                ]);
-            }
+                if(!Product::where('code',$product_code)->exists()) {
+                    $product = Product::create([
+                        'code' => $product_code
+                    ]);
+                } else {
+                    $product = Product::where('code', $product_code)->first();
+                }
+
+                if(!Serial::where('code', $serial_code)->exists()) {
+                    Serial::create([
+                        'code'              => $serial_code,
+                        'product_id'        => $product->id,
+                        'manufactured_at'   => $m_at_formatted,
+                        'cei_order'         => $cei_order,
+                        'poste_order'       => $poste_order,
+                        'regate_id'         => $regate->id
+                    ]);
+                }
+            
+            endif;
 
         }
     }

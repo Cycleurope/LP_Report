@@ -64,7 +64,7 @@
                 </div>
             </div>
             @else
-            <div class="alert alert-primary">{{ __('No Report') }}</div>
+            <div class="alert alert-primary">Aucun rapport enregistré.</div>
             @endif
         </div>
     </div>
@@ -129,7 +129,7 @@
                 </div>
             </div>
             @else
-            <div class="alert alert-primary">{{ __('No Report') }}</div>
+            <div class="alert alert-primary">Aucun rapport enregistré.</div>
             @endif
         </div>
     </div>

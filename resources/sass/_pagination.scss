@@ -1,0 +1,29 @@
+ul.pagination {
+    border: 0 !important;
+    li.page-item {
+        border: 0 !important;
+        span.page-link {
+            border: 0 !important;
+        }
+        a.page-link {
+            border: 0 !important;
+            &:hover {
+                background-color: #111114;
+                color: #ffffff;
+            }
+        }
+        &.active {
+            border: 0 !important;
+            span.page-link {
+                font-weight: 600 !important;
+                border-radius: 2px;
+            }
+        }
+        &.disabled {
+            span.page-link {
+                color: #aaaaaa;
+                background-color: #f4f4f4;
+            }
+        }
+    }
+}
