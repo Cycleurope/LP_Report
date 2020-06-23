@@ -26,9 +26,9 @@ class Regate extends Model
         if ($count === 0) {
             return '<span class="badge badge-pill badge-light text-secondary">Aucun rapport associé</span>';
         } else if($count === 1) {
-            return '<span class="badge badge-pill badge-primary py-2">1 rapport associé</span>';
+            return '<span class="badge badge-pill badge-primary py-1 px-3">1 rapport associé</span>';
         } else {
-            return '<span class="badge badge-pill badge-primary py-2">'.$count.' rapports associés</span>';
+            return '<span class="badge badge-pill badge-primary py-1 px-3">'.$count.' rapports associés</span>';
         }
     }
 }
