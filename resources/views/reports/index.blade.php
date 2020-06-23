@@ -101,12 +101,12 @@
                     <table class="table table-sm table-hover">
                         <thead>
                             <tr>
-                                <th>Serial</th>
-                                <th>Regate</th>
+                                <th>Numéro de série</th>
+                                <th>Code REGATE</th>
                                 <th>&nbsp;</th>
                                 <th>Audit / Contrôle</th>
                                 <th>Date Audit / Contrôle</th>
-                                <th>Fissure</th>
+                                <th>Micro-fissure</th>
                                 <th>Longueur (mm)</th>
                                 <th>Déclaré par</th>
                             </tr>
@@ -118,7 +118,7 @@
                                 <td>{{ $r->regate->code }}</td>
                                 <td>{{ $r->regate->name }}</td>
                                 <td>{!! $r->friendlyType() !!}</td>
-                                <td>{{ $r->report_date }}</td>
+                                <td>{{ date('d/m/Y', strtotime($r->report_date)) }}</td>
                                 <td>{!! $r->crackStatus() !!}</td>
                                 <td>{{ $r->crack_length }}</td>
                                 <td>{{ $r->user->login }}</td>

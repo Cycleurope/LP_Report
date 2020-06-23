@@ -56,7 +56,7 @@
                                     <label for="report_date">Observations</label>
                                     <textarea name="observations" id="observations" cols="30" rows="5" class="form-control"></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-block">Importer</button>
+                                <button type="submit" class="btn btn-primary btn-block">Envoyer</button>
                             </form>
                         </div>
                     </div>
@@ -77,7 +77,7 @@
                                     <label for="file">Fichier</label>
                                     <input type="file" name="file" id="file" class="form-control">
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-block">Importer</button>
+                                <button type="submit" class="btn btn-primary btn-block">Envoyer</button>
                             </form>
                         </div>
                     </div>
