@@ -18,8 +18,10 @@ class ReportsImport implements ToCollection, WithHeadingRow
         $user = Auth::user();
         foreach($collection as $row)
         {
+            $regate_cp              = trim($row['code_postal_bureau']);
+            $regate_city            = trim($row['ville_bureau']);
             $regate_code            = trim($row['regate_etablissement']);
-            $serial                 = trim($row['nserie']);
+            $serial                 = trim($row['nchassis']);
             $type                   = strtolower(trim($row['audit_controle']));
             if($type == "a") {
                 $type = "audit";
@@ -51,6 +53,8 @@ class ReportsImport implements ToCollection, WithHeadingRow
                     'crack'             => $crack,
                     'crack_length'      => $crack_length,
                     'observations'      => $observations,
+                    'postalcode'        => $regate_cp,
+                    'city'              => $regate_city
                 ]);
 
                 endif;
