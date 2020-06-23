@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<div class="container-fluid px-5 py-5">
+<div class="container px-5 py-5">
     <div class="row">
         <div class="col-12">
             <h1>Importer des numéros de série</h1>
