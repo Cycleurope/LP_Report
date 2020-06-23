@@ -35,7 +35,7 @@
                                 <td>{{ $report->serial->code }}</td>
                                 <td>{{ $report->serial->product->code }}</td>
                                 <td>{!! $report->friendlyType() !!}</td>
-                                <td>{{ $report->report_date }}</td>
+                                <td>{{ date('d/m/Y', strtotime($report->report_date)) }}</td>
                                 <td>{!! $report->crackStatus() !!}</td>
                                 <td>{{ $report->crack_length }}</td>
                                 <td>{{ $report->observations }}</td>
