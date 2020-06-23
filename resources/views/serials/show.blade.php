@@ -61,7 +61,7 @@
                                 <td>{{ $report->regate->code }}</td>
                                 <td><a href="{{ route('regates.show', $report->regate->code) }}">{{ $report->regate->name }}</a></td>
                                 <td>{!! $report->friendlyType() !!}</td>
-                                <td>{{ $report->report_date }}</td>
+                                <td>{{ date('d/m/Y', strtotime($report->report_date)) }}</td>
                                 <td>{!! $report->crackStatus() !!}</td>
                                 <td>{{ $report->crack_length }}</td>
                                 <td>{{ $report->observations }}</td>
