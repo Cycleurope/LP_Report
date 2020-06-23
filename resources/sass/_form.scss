@@ -1,9 +1,24 @@
 
 .form-control {
-    padding: 1.5em 1.5em !important;
+    //padding: 1.5em 1.5em !important;
     border: 1px solid #f2f2f2;
+    background: #f0f0f0;
+    line-height: 1.5em;
     border-radius: 0;
     outline: none;
     box-shadow: 0;
-    background-color: #f6f6f6;
+}
+
+select.form-control {
+    color: #ffffff;
+    background: #ffa000 !important;
+    border: 1px solid #ff8000;
+    option {
+        padding-left: 1em !important;
+        padding-right: 1em !important;
+        border: 1px solid red;
+        &:focus, &:active {
+            color: yellow;
+        }
+    }
 }
