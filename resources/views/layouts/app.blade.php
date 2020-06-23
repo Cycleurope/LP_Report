@@ -52,11 +52,6 @@
                             </li>
                             @role('admin')
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('products.index') }}">Produits</a>
-                            </li>
-                            @endrole
-                            @role('admin')
-                            <li class="nav-item">
                                 <a class="nav-link" href="{{ route('regates.index') }}">REGATE</a>
                             </li>
                             @endrole
