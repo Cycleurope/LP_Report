@@ -40,6 +40,7 @@ class ReportController extends Controller
     {
         $regate = null;
         $serial = null;
+
         if(Regate::where('code', trim($request->regate))->exists()) {
             $regate = Regate::where('code', trim($request->regate))->first();
         }
@@ -57,7 +58,9 @@ class ReportController extends Controller
                 'crack' => $request->crack,
                 'crack_length' => $request->crack_length,
                 'report_date' => $request->report_date,
-                'type' => $request->type
+                'type' => $request->type,
+                'postalcode' => $request->postel,
+                'city' => $request->city,
             ]);
         }
 

@@ -19,13 +19,30 @@
                             <form action="{{ route('reports.store') }}" enctype="multipart/form-data" method="POST">
                                 @csrf
                                 <div class="row">
-                                    <div class="form-group col-6">
+                                    <div class="col-12">
+                                        <h4>Vélo</h4>
+                                    </div>
+                                    <div class="form-group col-8">
+                                        <label for="serial">Numéro de série</label>
+                                        <input type="number" name="serial" id="serial" class="form-control text-center">
+                                    </div>
+                                    <div class="col-12">
+                                        <h4>Bureau de Poste</h4>
+                                    </div>
+                                    <div class="form-group col-8 offset-md-4">
                                         <label for="regate">Code REGATE</label>
                                         <input type="number" name="regate" id="regate" class="form-control text-center">
                                     </div>
-                                    <div class="form-group col-6">
-                                        <label for="serial">Numéro de série</label>
-                                        <input type="number" name="serial" id="serial" class="form-control text-center">
+                                    <div class="form-group col-4">
+                                        <label for="postal">Code Postal</label>
+                                        <input type="number" name="postal" id="postal" class="form-control text-center">
+                                    </div>
+                                    <div class="form-group col-8">
+                                        <label for="city">Ville</label>
+                                        <input type="text" name="city" id="city" class="form-control text-center">
+                                    </div>
+                                    <div class="col-12">
+                                        <h4>Inspection</h4>
                                     </div>
                                     <div class="form-group col-6">
                                         <label for="report_date">Type de rapport</label>
