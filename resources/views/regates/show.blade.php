@@ -25,7 +25,7 @@
                                 <th>Audit / Contrôle</th>
                                 <th>Date Audit / Contrôle</th>
                                 <th>Micro-fissure</th>
-                                <th>Longueur (en mm))</th>
+                                <th>Longueur (en mm)</th>
                                 <th>Observations</th>
                             </tr>
                         </thead>
@@ -34,7 +34,7 @@
                             <tr>
                                 <td>{{ $report->serial->code }}</td>
                                 <td>{{ $report->serial->product->code }}</td>
-                                <td>{!! $report->friendlyType !!}</td>
+                                <td>{!! $report->friendlyType() !!}</td>
                                 <td>{{ $report->report_date }}</td>
                                 <td>{!! $report->crackStatus() !!}</td>
                                 <td>{{ $report->crack_length }}</td>
