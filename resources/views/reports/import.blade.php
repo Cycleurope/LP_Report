@@ -11,7 +11,7 @@
         <div class="col-lg-6 mb-4">
             <div class="row">
                 <div class="col-12">
-                    <h3>Un seul cadre à vérifier</h3>
+                    <h3>Un seul cadre vérifié</h3>
                 </div>
                 <div class="col-12">
                     <div class="card border-0">
@@ -83,7 +83,7 @@
         <div class="col-lg-6">
             <div class="row">
                 <div class="col-12">
-                    <h3>Plusieurs cadres</h3>
+                    <h3>Plusieurs cadres vérifés</h3>
                 </div>
                 <div class="col-12">
                     <div class="card border-0">
