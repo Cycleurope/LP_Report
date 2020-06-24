@@ -23,7 +23,7 @@
                                         <h4>V.A.E.</h4>
                                     </div>
                                     <div class="form-group col-8">
-                                        <label for="serial">Numéro de série</label>
+                                        <label for="serial">Numéro de châssis</label>
                                         <input type="text" name="serial" id="serial" class="form-control text-center">
                                     </div>
                                     <div class="col-12">
