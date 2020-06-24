@@ -10932,7 +10932,7 @@ h1 {
   font-size: 3em;
   font-weight: 600;
   line-height: 1em;
-  margin-bottom: 1em;
+  margin-bottom: 0em;
 }
 
 header#header {
@@ -10944,7 +10944,7 @@ header#header {
 }
 
 header#header nav.navbar {
-  background: #ff9000;
+  background: #ffa023;
   min-height: 80px;
 }
 
@@ -10956,7 +10956,7 @@ header#header nav.navbar .nav-item {
 
 header#header nav.navbar .nav-item a.nav-link {
   color: #ffffff;
-  background: #ff8800;
+  background: #ff9215;
   padding: 0.5em 1em;
   border-radius: 2em;
 }
@@ -10968,8 +10968,9 @@ header#header nav.navbar .nav-item a.nav-link:hover {
 header#header nav.navbar .nav-item .dropdown-menu {
   background: #ffffff;
   margin-top: 0;
-  border-radius: 0;
+  border-radius: 4px;
   border: 0;
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 header#header nav.navbar .nav-item .dropdown-menu .dropdown-item {
@@ -10985,7 +10986,7 @@ header#header nav.navbar .nav-item .dropdown-menu .dropdown-item:hover {
 header#header nav.navbar .navbar-brand {
   color: #ffffff;
   font-weight: 600;
-  text-transform: uppercase;
+  line-height: 1em;
 }
 
 .table thead tr th {

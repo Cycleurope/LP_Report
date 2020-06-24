@@ -5,7 +5,7 @@ header#header {
     width: 100%;
     z-index: 9999;
     nav.navbar {
-        background: #ff9000;
+        background: #ffa023;
         min-height: 80px;
         .nav-item {
             padding: 0.25em;
@@ -13,7 +13,7 @@ header#header {
             font-size: 1em;
             a.nav-link {
                 color: #ffffff;
-                background: #ff8800;
+                background: #ff9215;
                 padding: 0.5em 1em;
                 border-radius: 2em;
                 &:hover {
@@ -23,8 +23,9 @@ header#header {
             .dropdown-menu {
                 background: #ffffff;
                 margin-top: 0;
-                border-radius: 0;
+                border-radius: 4px;
                 border: 0;
+                box-shadow: 0px 8px 12px rgba(0,0,0,0.2);
                 .dropdown-item {
                     padding: 0.5em 1.5em;
                     transition: all .25s;
@@ -38,7 +39,7 @@ header#header {
         .navbar-brand {
             color: #ffffff;
             font-weight: 600;
-            text-transform: uppercase;
+            line-height: 1em;
         }
     }
 }

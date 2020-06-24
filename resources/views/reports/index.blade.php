@@ -82,24 +82,6 @@
             @if(count($reports))
             <div class="card border-0">
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col-4">
-                            <h3>{{ $reports->count() }}</h3>
-                            rapports enregistrés
-                        </div>
-                        <div class="col-4">
-                            <h3>{{ $reports_ko->count() }}</h3>
-                            {{ number_format($reports_ok->count()/$reports->count() * 100, 2) }} %
-                        </div>
-                        <div class="col-4">
-                            <h3>{{ $reports_ok->count() }}</h3>
-                            {{ number_format($reports_ko->count()/$reports->count() * 100, 2) }} %
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card border-0">
-                <div class="card-body">
                     <table class="table table-sm table-hover">
                         <thead>
                             <tr>

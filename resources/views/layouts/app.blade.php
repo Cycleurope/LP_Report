@@ -36,9 +36,9 @@
                             @endrole
                             @role('admin')
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Numéros de série</a>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Numéros de châssis</a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('serials.index') }}">Tous les numéros de série</a>
+                                    <a class="dropdown-item" href="{{ route('serials.index') }}">Tous les numéros de châssis</a>
                                     <a class="dropdown-item" href="{{ route('serials.import.form') }}">Importer</a>
                                 </div>
                             </li>
@@ -46,7 +46,13 @@
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Rapports</a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('reports.index') }}">Tous les rapports</a>
+                                    <a class="dropdown-item" href="{{ route('reports.index') }}">
+                                    @role('admin')
+                                    Tous les rapports
+                                    @else
+                                    Mes rapports
+                                    @endif
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('reports.import.form') }}">Envoyer des rapports</a>
                                 </div>
                             </li>

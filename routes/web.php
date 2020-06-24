@@ -18,12 +18,16 @@ Auth::routes(['register' => false, 'password.request' => false, 'reset' => false
 
 Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('/reports', 'ReportController@index')->name('reports.index');
-Route::get('/reports/import', 'ReportController@importForm')->name('reports.import.form');
-Route::post('/reports', 'ReportController@store')->name('reports.store');
-Route::post('/reports/import', 'ReportController@import')->name('reports.import.post');
+Route::group(['middleware' => ['role:admin|user']], function() {
 
-Route::get('/brands', 'BrandController@index')->name('brands.index');   
+    Route::get('/reports', 'ReportController@index')->name('reports.index');
+    Route::get('/reports/import', 'ReportController@importForm')->name('reports.import.form');
+    Route::post('/reports', 'ReportController@store')->name('reports.store');
+    Route::post('/reports/import', 'ReportController@import')->name('reports.import.post');
+
+    Route::get('/brands', 'BrandController@index')->name('brands.index');   
+
+});
 
 Route::group(['middleware' => ['role:admin']], function() {
 

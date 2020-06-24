@@ -8,7 +8,7 @@ class Report extends Model
 {
     protected $table = "reports";
 
-    protected $fillable = ['bike', 'brand_id', 'type', 'report_date', 'crack', 'crack_length', 'observations', 'frame_replacement', 'serial_id', 'user_id', 'regate_id'];
+    protected $fillable = ['bike', 'brand_id', 'type', 'report_date', 'crack', 'crack_length', 'observations', 'frame_replacement', 'serial_id', 'user_id', 'regate_id', 'postalcode', 'city'];
 
     public function serial()
     {

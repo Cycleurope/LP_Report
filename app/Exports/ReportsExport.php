@@ -37,7 +37,7 @@ class ReportsExport implements FromCollection, ShouldAutoSize, WithHeadings, Wit
             $report->observations,
             $report->user->login,
             $report->user->name,
-            $report->user->postalcode,
+            $report->user->postal_code,
             $report->user->city,
             substr($report->created_at, 8, 2)."/".substr($report->created_at, 5, 2)."/".substr($report->created_at, 0, 4),
             '',
