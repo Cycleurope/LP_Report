@@ -11,6 +11,7 @@
         <div class="col-12 mb-4">
         <a href="{{ route('reports.export') }}" class="btn btn-success btn-lg">Exporter les rapports</a>
         </div>
+        @role('admin')
         <div class="col-12">
             @if(count($reports))
             <div class="card border-0">
@@ -67,6 +68,7 @@
             <div class="alert alert-primary">Aucun rapport enregistré.</div>
             @endif
         </div>
+        @endrole
     </div>
     @endrole
     @role('user')
