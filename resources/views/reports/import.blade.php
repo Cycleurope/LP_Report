@@ -11,7 +11,7 @@
         <div class="col-lg-6 mb-4">
             <div class="row">
                 <div class="col-12">
-                    <h3>Je n'ai qu'un seul rapport à envoyer</h3>
+                    <h3>Un seul cadre à vérifier</h3>
                 </div>
                 <div class="col-12">
                     <div class="card border-0">
@@ -20,7 +20,7 @@
                                 @csrf
                                 <div class="row">
                                     <div class="col-12">
-                                        <h4>Vélo</h4>
+                                        <h4>V.A.E.</h4>
                                     </div>
                                     <div class="form-group col-8">
                                         <label for="serial">Numéro de série</label>
@@ -42,7 +42,7 @@
                                         <input type="text" name="city" id="city" class="form-control text-center">
                                     </div>
                                     <div class="col-12">
-                                        <h4>Inspection</h4>
+                                        <h4>Inspection du cadre</h4>
                                     </div>
                                     <div class="form-group col-6">
                                         <label for="report_date">Type de rapport</label>
@@ -66,7 +66,7 @@
                                     </div>
                                     <div class="form-group col-8">
                                         <label for="report_date">Longueur (en mm)</label>
-                                        <input type="number" name="crack_length" id="crack_length" class="form-control text-center" value="0" min="0" max="10">
+                                        <input type="number" name="crack_length" id="crack_length" class="form-control text-center" value="0" min="0" max="15">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -83,7 +83,7 @@
         <div class="col-lg-6">
             <div class="row">
                 <div class="col-12">
-                    <h3>J'ai plusieurs rapports à envoyer</h3>
+                    <h3>Plusieurs cadres</h3>
                 </div>
                 <div class="col-12">
                     <div class="card border-0">
