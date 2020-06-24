@@ -22,6 +22,13 @@
                     <label for="email">Adresse e-mail</label>
                     <input type="email" name="email" id='email' class="form-control">
                 </div>
+                <div class="form-group">
+                    <label for="role">Type de compte</label>
+                    <select name="role" id="role" class="form-control">
+                        <option value="user">Réparateur La Poste</option>
+                        <option value="admin">Administrateur</option>
+                    </select>
+                </div>
                 <input type="submit" value="Valilider" class="btn btn-block btn-primary">
             </form>
         </div>
