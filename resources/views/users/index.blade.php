@@ -3,7 +3,7 @@
 <div class="container-flui p-5">
     <div class="row">
         <div class="col-12">
-            <h1>Comptes Utilisteurs</h1>
+            <h1>Comptes Utilisateurs</h1>
         </div>
     </div>
     <div class="row">

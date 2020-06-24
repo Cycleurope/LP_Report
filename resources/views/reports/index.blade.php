@@ -51,10 +51,10 @@
                             @foreach($reports as $r)
                             <tr>
                                 <td><a href="{{ route('serials.show', $r->serial->code) }}">{{ $r->serial->code }}</a></td>
-                                <td>{{ $r->regate->code }}</td>
-                                <td>{{ $r->regate->name }}</td>
+                                <td><a href="{{ route('regates.show', $r->regate->code) }}">{{ $r->regate->code }}</a></td>
+                                <td><a href="{{ route('regates.show', $r->regate->code) }}">{{ $r->regate->name }}</a></td>
                                 <td>{!! $r->friendlyType() !!}</td>
-                                <td>{{ $r->report_date }}</td>
+                                <td>{{ date('d/m/Y', strtotime($r->report_date)) }}</td>
                                 <td>{!! $r->crackStatus() !!}</td>
                                 <td>{{ $r->crack_length }}</td>
                                 <td>{{ $r->user->login }}</td>
