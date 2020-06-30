@@ -37,7 +37,7 @@ class ReportsImport implements ToCollection, WithHeadingRow
             $crack_length           = intval($crack_length);
             $observations           = trim($row['observations']);
 
-            if( Serial::where('code', $serial)->exists() && Regate::where('code', $regate_code)->exists()) {
+            if( Serial::where('code', $serial)->exists()) {
 
                 $serial = Serial::where('code', $serial)->first();
                 $regate = Regate::where('code', $regate_code)->first();
