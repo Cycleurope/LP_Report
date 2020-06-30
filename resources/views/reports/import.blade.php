@@ -88,6 +88,13 @@
                 <div class="col-12">
                     <div class="card border-0">
                         <div class="card-body">
+                            <div class="alert alert-primary">
+                                <a href="{{ asset('files/LPReport - Tableau à remplir.xlsx') }}" class="btn btn-success btn-block" download>Téléchargez le fichier d'exemple à téléverser</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-0">
+                        <div class="card-body">
                             <form action="{{ route('reports.import.post') }}" enctype="multipart/form-data" method="POST">
                                 @csrf
                                 <div class="form-group">
