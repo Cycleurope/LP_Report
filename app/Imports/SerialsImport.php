@@ -63,7 +63,8 @@ class SerialsImport implements ToCollection, WithHeadingRow
                         'manufactured_at'   => $m_at_formatted,
                         'cei_order'         => $cei_order,
                         'poste_order'       => $poste_order,
-                        'regate_id'         => $regate->id
+                        'regate_id'         => $regate->id,
+                        'registered'        => true,
                     ]);
                 }
             

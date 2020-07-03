@@ -34,6 +34,7 @@
             </div>
             <div class="card border-0">
                 <div class="card-body">
+                    {{ $reports->links() }}
                     <table class="table table-sm table-hover">
                         <thead>
                             <tr>
@@ -51,8 +52,16 @@
                             @foreach($reports as $r)
                             <tr>
                                 <td><a href="{{ route('serials.show', $r->serial->code) }}">{{ $r->serial->code }}</a></td>
-                                <td><a href="{{ route('regates.show', $r->regate->code) }}">{{ $r->regate->code }}</a></td>
-                                <td><a href="{{ route('regates.show', $r->regate->code) }}">{{ $r->regate->name }}</a></td>
+                                <td>
+                                    @if($r->regate)
+                                    <a href="{{ route('regates.show', $r->regate->code) }}">{{ $r->regate->code }}</a>
+                                    @endif
+                                </td>
+                                <td>
+                                    @if($r->regate)
+                                    <a href="{{ route('regates.show', $r->regate->code) }}">{{ $r->regate->name }}</a>
+                                    @endif
+                                </td>
                                 <td>{!! $r->friendlyType() !!}</td>
                                 <td>{{ date('d/m/Y', strtotime($r->report_date)) }}</td>
                                 <td>{!! $r->crackStatus() !!}</td>
@@ -62,6 +71,7 @@
                             @endforeach
                         </tbody>
                     </table>
+                    {{ $reports->links() }}
                 </div>
             </div>
             @else

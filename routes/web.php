@@ -27,6 +27,9 @@ Route::group(['middleware' => ['role:admin|user']], function() {
 
     Route::get('/brands', 'BrandController@index')->name('brands.index');   
 
+    Route::resource('/manual-reports', 'ManualReportController');
+    Route::post('/manual-reports/bulk-delete', 'ManualReportController@bulkDelete')->name('manual-reports.bulk-delete');
+
 });
 
 Route::group(['middleware' => ['role:admin']], function() {
@@ -34,6 +37,7 @@ Route::group(['middleware' => ['role:admin']], function() {
     Route::get('/reports/export', 'ReportController@export')->name('reports.export');
     
     Route::get('/serials', 'SerialController@index')->name('serials.index');
+    Route::get('/serials/unregistered', 'SerialController@unregistered')->name('serials.unregistered');
     Route::get('/serials/import', 'SerialController@importForm')->name('serials.import.form');
     Route::get('/serials/{serial}', 'SerialController@show')->name('serials.show');
     Route::post('/serials/import', 'SerialController@import')->name('serials.import.post');

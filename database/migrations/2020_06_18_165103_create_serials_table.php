@@ -23,6 +23,7 @@ class CreateSerialsTable extends Migration
             $table->foreign('regate_id')->references('id')->on('regates')->onDelete('cascade');
             $table->bigInteger('product_id')->unsigned();
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
+            $table->boolean('registered')->default(0)->nullable();
             $table->timestamps();
         });
     }

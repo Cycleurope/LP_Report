@@ -8,7 +8,7 @@ class Serial extends Model
 {
     protected $table = "serials";
 
-    protected $fillable = ['code', 'product_code', 'cei_order', 'poste_order', 'regate_id', 'manufactured_at', 'product_id'];
+    protected $fillable = ['code', 'product_code', 'cei_order', 'poste_order', 'regate_id', 'manufactured_at', 'product_id', 'registered'];
 
     public function regate()
     {

@@ -16,7 +16,7 @@ class ReportController extends Controller
     public function index()
     {
         if(Auth::user()->hasRole('admin')):
-        $reports = Report::all();
+        $reports = Report::paginate(30);
         $reports_ok = Report::where('crack', 0)->get();
         $reports_ko = Report::where('crack', 1)->get();
         else:

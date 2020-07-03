@@ -11,8 +11,7 @@
             @if(count($users))
             <div class="card border-0">
                 <div class="card-body">
-                    {{ $users->links() }}
-                    <table class="table table-sm table-hover">
+                    <table class="table table-sm table-hover" id="datatable">
                         <thead>
                             <tr>
                                 <th>Identifiant</th>
@@ -38,7 +37,6 @@
                             @endforeach
                         </tbody>
                     </table>
-                    {{ $users->links() }}
                 </div>
             </div>
             @else
