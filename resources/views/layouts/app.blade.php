@@ -52,9 +52,18 @@
                                     <a class="dropdown-item" href="{{ route('reports.index') }}">
                                     @role('admin')
                                     Tous les rapports
-                                    @else
+                                    @endrole
+                                    @role('user')
                                     Mes rapports
-                                    @endif
+                                    @endrole
+                                    </a>
+                                    <a href="{{ route('manual-reports.index') }}" class="dropdown-item">
+                                    @role('admin')
+                                    Rapport à traiter manuellemenet
+                                    @endrole
+                                    @role('user')
+                                    En attente de traitement
+                                    @endrole
                                     </a>
                                     <a class="dropdown-item" href="{{ route('reports.import.form') }}">Envoyer des rapports</a>
                                 </div>
