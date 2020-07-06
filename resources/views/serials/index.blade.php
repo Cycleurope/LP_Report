@@ -12,7 +12,6 @@
             @if(count($serials))
             <div class="card border-0">
                 <div class="card-body">
-                    {{ $serials->links() }}
                     <table class="table table-sm table-hover" id="datatable">
                         <thead>
                             <tr>
@@ -45,7 +44,6 @@
                             @endforeach
                         </tbody>
                     </table>
-                    {{ $serials->links() }}
                 </div>
             </div>
             @else
