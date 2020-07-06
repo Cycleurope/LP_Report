@@ -34,8 +34,7 @@
             </div>
             <div class="card border-0">
                 <div class="card-body">
-                    {{ $reports->links() }}
-                    <table class="table table-sm table-hover">
+                    <table class="table table-sm table-hover" id="datatable">
                         <thead>
                             <tr>
                                 <th>Serial</th>
@@ -71,7 +70,6 @@
                             @endforeach
                         </tbody>
                     </table>
-                    {{ $reports->links() }}
                 </div>
             </div>
             @else
