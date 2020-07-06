@@ -13,7 +13,7 @@
             <div class="card border-0">
                 <div class="card-body">
                     {{ $regates->links() }}
-                    <table class="table table-sm table-hover">
+                    <table class="table table-sm table-hover" id="datatable">
                         <thead>
                             <tr>
                                 <th>Code</th>
