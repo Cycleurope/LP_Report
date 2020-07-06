@@ -11,7 +11,7 @@ class SerialController extends Controller
 {
     public function index()
     {
-        $serials = Serial::orderBy('code', 'DESC')->paginate(50);
+        $serials = Serial::orderBy('code', 'DESC')->get();
         $serials_count = Serial::all()->count();
         return view('serials.index', [
             'serials' => $serials,
@@ -21,7 +21,7 @@ class SerialController extends Controller
 
     public function unregistered()
     {
-        $serials = Serial::orderBy('created_at', 'DESC')->paginate(50);
+        $serials = Serial::orderBy('created_at', 'DESC')->get();
         return view('serials.unregistered', [
             'serials' => $serials
         ]);
