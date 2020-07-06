@@ -12,7 +12,6 @@
             @if(count($regates))
             <div class="card border-0">
                 <div class="card-body">
-                    {{ $regates->links() }}
                     <table class="table table-sm table-hover" id="datatable">
                         <thead>
                             <tr>
@@ -37,7 +36,6 @@
                             @endforeach
                         </tbody>
                     </table>
-                    {{ $regates->links() }}
                 </div>
             </div>
             @else
