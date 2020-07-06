@@ -9,7 +9,7 @@ class RegateController extends Controller
 {
     public function index()
     {
-        $regates = Regate::orderBy('code', 'ASC')->all();
+        $regates = Regate::orderBy('code', 'ASC')->get();
         $regates_count = Regate::all()->count();
         return view('regates.index', [
             'regates' => $regates,
