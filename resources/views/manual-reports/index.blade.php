@@ -43,8 +43,9 @@
                     @endforeach
                 </tbody>
             </table>
-            @endif
             <button type="submit" class="btn btn-primary mb-5">Supprimer les lignes sélectionnées</button>
+
+            @endif
             </form>
         </div>
     </div>
