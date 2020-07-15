@@ -44,6 +44,7 @@
                                 <th>Date Audit / Contrôle</th>
                                 <th>Fissure</th>
                                 <th>Longueur (mm)</th>
+                                <th>&nbsp;</th>
                                 <th>Déclaré par</th>
                             </tr>
                         </thead>
@@ -65,6 +66,7 @@
                                 <td>{{ date('d/m/Y', strtotime($r->report_date)) }}</td>
                                 <td>{!! $r->crackStatus() !!}</td>
                                 <td>{{ $r->crack_length }}</td>
+                                <td><img src="{{ asset('img/').$r->crack_length.'.jpg' }}" alt=""></td>
                                 <td>{{ $r->user->login }}</td>
                             </tr>
                             @endforeach
