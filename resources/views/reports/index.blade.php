@@ -66,7 +66,7 @@
                                 <td>{{ date('d/m/Y', strtotime($r->report_date)) }}</td>
                                 <td>{!! $r->crackStatus() !!}</td>
                                 <td>{{ $r->crack_length }}</td>
-                                <td><img src="{{ asset('img/')'/crack'.$r->crack_length.'.jpg' }}" alt=""></td>
+                                <td><img src="{{ asset('img/').'/crack'.$r->crack_length.'.jpg' }}" alt=""></td>
                                 <td>{{ $r->user->login }}</td>
                             </tr>
                             @endforeach
