@@ -10,6 +10,7 @@
         <div class="col-12">
             <form action="{{ route('manual-reports.bulk-delete') }}" method="POST">
             @csrf
+            @if(count($manualreports))
             <table class="table table-striped" id="datatable">
                 <thead>
                     <tr>
@@ -42,6 +43,7 @@
                     @endforeach
                 </tbody>
             </table>
+            @endif
             <button type="submit" class="btn btn-primary mb-5">Supprimer les lignes sélectionnées</button>
             </form>
         </div>
