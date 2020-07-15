@@ -16,7 +16,7 @@ class ManualReportController extends Controller
     public function index()
     {
         if(Auth::user()->hasRole('user')):
-            $manual_reports = ManualReport::where('user', Auth::user()->id)->get();
+            $manual_reports = ManualReport::where('user_id', Auth::user()->id)->get();
         else:
             $manual_reports = ManualReport::all();
         endif;
