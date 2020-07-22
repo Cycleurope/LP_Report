@@ -34,6 +34,7 @@
             </div>
             <div class="card border-0">
                 <div class="card-body">
+                    {{ $reports->links() }}
                     <table class="table table-sm table-hover" id="_datatable">
                         <thead>
                             <tr>
@@ -44,7 +45,6 @@
                                 <th>Date Audit / Contrôle</th>
                                 <th>Fissure</th>
                                 <th>Longueur (mm)</th>
-                                <th>&nbsp;</th>
                                 <th>Déclaré par</th>
                             </tr>
                         </thead>
@@ -66,12 +66,12 @@
                                 <td>{{ date('d/m/Y', strtotime($r->report_date)) }}</td>
                                 <td>{!! $r->crackStatus() !!}</td>
                                 <td>{{ $r->crack_length }}</td>
-                                <td><img src="{{ asset('img/').'/crack'.$r->crack_length.'.jpg' }}" alt=""></td>
                                 <td>{{ $r->user->login }}</td>
                             </tr>
                             @endforeach
                         </tbody>
                     </table>
+                    {{ $reports->links() }}
                 </div>
             </div>
             @else
