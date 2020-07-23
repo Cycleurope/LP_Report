@@ -24,7 +24,7 @@ Route::group(['middleware' => ['role:admin|user']], function() {
     Route::get('/reports/import', 'ReportController@importForm')->name('reports.import.form');
     Route::post('/reports', 'ReportController@store')->name('reports.store');
     Route::post('/reports/import', 'ReportController@import')->name('reports.import.post');
-
+    Route::delete('/reports/destroy/{id}', 'ReportController@destroy')->name('reports.destroy');
     Route::get('/brands', 'BrandController@index')->name('brands.index');   
 
     Route::resource('/manual-reports', 'ManualReportController');

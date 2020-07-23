@@ -46,6 +46,7 @@
                                 <th>Fissure</th>
                                 <th>Longueur (mm)</th>
                                 <th>Déclaré par</th>
+                                <th>&nbsp;</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -67,6 +68,20 @@
                                 <td>{!! $r->crackStatus() !!}</td>
                                 <td>{{ $r->crack_length }}</td>
                                 <td>{{ $r->user->login }}</td>
+                                <td class="text-right">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Action
+                                        </button>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <form action="{{ route('reports.destroy', $r) }}" method="POST">
+                                                @csrf
+                                                <input type="hidden" name="_method" value="DELETE">
+                                                <button class="dropdown-item" type="submit">Supprimer</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </td>
                             </tr>
                             @endforeach
                         </tbody>

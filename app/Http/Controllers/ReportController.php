@@ -69,6 +69,13 @@ class ReportController extends Controller
             ->with('class', 'success');
     }
 
+    public function destroy($id)
+    {
+        $report = Report::find($id);
+        $report->delete();
+        return redirect()->route('reports.index');
+    }
+
     public function import(Request $request)
     {
         ini_set('memory_limit', '1024M');
