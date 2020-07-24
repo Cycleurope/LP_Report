@@ -48,7 +48,13 @@ class ReportsImport implements ToCollection, WithHeadingRow
             if( Serial::where('code', $serial)->exists()) {
 
                 $serial = Serial::where('code', $serial)->first();
-                $regate = Regate::where('code', $regate_code)->first();
+                if(Regate::where('code', $regate_code)->exists()) {
+                    $regate = Regate::where('code', $regate_code)->first();
+                } else {
+                    $regate = Regate::create([
+                        'code' => $regate_code
+                    ]);
+                }
 
                 if($regate != null) {
                     $regate_id = $regate->id;
