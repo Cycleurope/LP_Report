@@ -53,7 +53,8 @@ class ReportsImport implements ToCollection, WithHeadingRow
                 } else {
                     $regate = Regate::create([
                         'code' => $regate_code,
-                        'name' => $regate_city
+                        'postal_code' => $regate_cp,
+                        'city' => $regate_city
                     ]);
                 }
 
