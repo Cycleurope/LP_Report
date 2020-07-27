@@ -129,7 +129,20 @@
                             <tr>
                                 <td><a href="{{ route('serials.show', $r->serial->code) }}">{{ $r->serial->code }}</a></td>
                                 <td>{{ $r->regate->code }}</td>
-                                <td>{{ $r->regate->name }}</td>
+                                <td>
+                                    @if($r->regate)
+                                    <a href="{{ route('regates.show', $r->regate->code) }}">{{ $r->regate->code }}</a>
+                                    @endif
+                                </td>
+                                <td>
+                                    @if($r->regate)
+                                        @if( $r->regate->name == '')
+                                        {{ $r->regate->city }} <small>(Ville Bureau)</small>
+                                        @else
+                                        <a href="{{ route('regates.show', $r->regate->code) }}">{{ $r->regate->name }}</a>
+                                        @endif
+                                    @endif
+                                </td>
                                 <td>{!! $r->friendlyType() !!}</td>
                                 <td>{{ date('d/m/Y', strtotime($r->report_date)) }}</td>
                                 <td>{!! $r->crackStatus() !!}</td>
