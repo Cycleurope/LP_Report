@@ -60,7 +60,11 @@
                                 </td>
                                 <td>
                                     @if($r->regate)
-                                    <a href="{{ route('regates.show', $r->regate->code) }}">{{ $r->regate->name }}</a>
+                                        @if( $r->regate->name == '')
+                                        {{ $r->regate->city }} <small>(Code REGATE à compléter)</small>
+                                        @else
+                                        <a href="{{ route('regates.show', $r->regate->code) }}">{{ $r->regate->name }}</a>
+                                        @endif
                                     @endif
                                 </td>
                                 <td>{!! $r->friendlyType() !!}</td>

@@ -52,9 +52,9 @@ class ReportsImport implements ToCollection, WithHeadingRow
                     $regate = Regate::where('code', $regate_code)->first();
                 } else {
                     $regate = Regate::create([
-                        'code' => $regate_code,
-                        'postal_code' => $regate_cp,
-                        'city' => $regate_city
+                        'code'              => $regate_code,
+                        'postal_code'       => $regate_cp,
+                        'city'              => $regate_city
                     ]);
                 }
 
