@@ -24,7 +24,7 @@
                                     </div>
                                     <div class="form-group col-8">
                                         <label for="serial">Numéro de châssis (8 chiffres)</label>
-                                        <span>500</span><input type="text" name="serial" id="serial" class="form-control text-center" maxchars="8" placeholder="" style="text-align: left;">
+                                        <input type="text" name="serial" id="serial" class="form-control" maxchars="8" placeholder="" style="text-align: left;">
                                     </div>
                                     <div class="col-12">
                                         <h4>Bureau de Poste</h4>
